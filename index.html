@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="zh-Hant"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🐰 邦尼兔的森林冒險</title>
+<style>
+body{font-family:sans-serif;background:#eefbe8;text-align:center;padding:20px}
+button{font-size:20px;padding:10px 20px;margin:8px}
+.card{background:white;border-radius:16px;padding:20px;max-width:600px;margin:auto}
+</style></head><body><div class='card'><h1>🐰 邦尼兔的森林冒險</h1>
+<p id='star'>⭐0</p><div id='g'></div></div>
+<script>
+let s=0;const g=document.getElementById('g');
+function upd(){star.textContent='⭐'+s;}
+function l1(){g.innerHTML="<h2>Level1 哪個是哺乳類?</h2><button onclick='ok()'>🐶</button><button onclick='alert(`再試試`)'>🐍</button><button onclick='alert(`再試試`)'>🦅</button>";}
+function ok(){s++;upd();l2();}
+function l2(){g.innerHTML="<h2>Level2 🐟🐟🐟🐟 有幾隻?</h2><button onclick='c(3)'>3</button><button onclick='c(4)'>4</button><button onclick='c(5)'>5</button>";}
+function c(n){if(n==4){s++;upd();l3();}else alert('再數一次');}
+function l3(){g.innerHTML="<h2>🎁 恭喜詠菲過關！</h2><h1>🏆</h1><p>你收集了 "+s+" 顆星星！</p>";}
+upd();l1();
+</script></body></html>
